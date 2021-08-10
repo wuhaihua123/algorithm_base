@@ -8,12 +8,13 @@ import com.company.common.CommonVO;
 public class SelectSort extends CommonVO {
 
     public static void main(String[] args) {
-        int[] test = {5, 56, 8, 4, 7, 67, 345, 4, 1, 2, 5, 3, 6};
+        int[] test = getArray();
         selectSort(test);
         print(test);
 
 
     }
+
 
 
 

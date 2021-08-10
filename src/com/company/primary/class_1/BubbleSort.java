@@ -8,14 +8,30 @@ import com.company.common.CommonVO;
 public class BubbleSort extends CommonVO {
 
     public static void main(String[] args) {
+        int[] test = getArray();
+        bubbleSort(test);
+        print(test);
+
 
     }
 
     /**
      * 冒泡排序
+     *
      * @param arr
      */
     private static void bubbleSort(int[] arr) {
+        if (arr == null || arr.length == 1) {
+            return;
+        }
+        int N = arr.length;
+        for (int i = N - 1; i > 0; i--) {
+            for (int end = 1; end <= i; end++) {
+                if (arr[end] < arr[end - 1]) {
+                    swap(arr, end, end - 1);
+                }
+            }
+        }
 
     }
 }
